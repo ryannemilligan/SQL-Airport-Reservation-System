@@ -8,30 +8,6 @@ This repository contains the design, implementation, and query reports for a Fli
 
 This database system is designed to manage information related to flights, airports, pilots, aircraft types, departures, reservations, passengers, and tickets. It supports core functionalities required for a basic flight reservation system.
 
----
-
-## Project Structure.
-
-your-project-name/
-├── README.md              
-├── documentation/
-│   ├── RMilligan_RD.pdf   # Requirement Document
-│   ├── RMilligan_ERD.png  # Entity-Relationship Diagram
-│   ├── RMilligan_ERDLogicalSchema.png # Logical ERD
-│   ├── RMilligan_LogicalSchema.txt # Text representation of Logical Schema
-│   └── RMilligan_UML.png  # UML Diagram (possibly for system components/interactions)
-├── sql/
-│   ├── schema/
-│   │   ├── live-sql-demo.sql # Main script for table creation and initial data
-│   │   └── RMilligan_queries.sql # Potentially more schema or data scripts
-│   ├── queries/
-│   │   └── part3_queries.sql # All SQL queries for Part 3 reporting
-├── reports/
-│   ├── (Your screenshots of query outputs for Part 3)
-│   └── MSmith_Part3_SQL.zip # Final zipped submission package
-└── 
-
----
 
 ---
 
