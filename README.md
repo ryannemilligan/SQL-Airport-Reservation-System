@@ -1,4 +1,4 @@
-# Flight Reservation Database Project
+# SQL - Flight Reservation Database Project
 
 This repository contains the design, implementation, and query reports for a Flight Reservation Database project. The project is structured into three main parts, covering the full lifecycle from conceptual design to data retrieval and reporting.
 
