@@ -1,0 +1,61 @@
+Run the following SQL Queries in the database you have created for project #3 and submit reports:
+
+Display the origin, destination, departure time from origin, and arrival time at destination for all flights that occur in the same time zone. Your results should be displayed in order by flight number.
+
+Display the code, location, and elevation of all airports without a hub airline. Your results should be in descending order by elevation.
+
+Display the departures originating from Los Angeles, CA. Include in your results flights from Los Angeles for which no departures currently exist. Los Angeles, CA and not LAX should be used in the WHERE clause of your query.
+
+Display the flight numbers and the codes for the origins and destinations of all flight reservations made by Andy Anderson.
+
+Display the seating capacity, fuel capacity, and miles per gallon for all aircraft manufactured by Boeing. Information about each equipment type should be displayed only once.
+
+Display the names of all pilots who live outside of the state of Texas. Order the results in alphabetical order by last name.
+
+Display the flight number, flight date, fare, origin, and destination for all tickets with a flight date of July 2006. Use the fare in the FLIGHT table as the fare for the ticket. Order your results in ascending order by flight date and within flight date by flight number.
+
+Display all flights that originate at an airport without a hub airline.
+
+Display all flights that arrive at an airport without a hub airline.
+
+Display all flights that both originate and arrive at an airport without a hub airline.
+
+Display all departures that are flown by an aircraft not manufactured by Boeing. Your results should be in ascending order by departure date and within departure date by flight number.
+
+Display the distance divided by the fare for each flight. For each flight, display the flight number, the origin, the destination, the fare, and the quotient. Your results should be in descending order by the quotient and rounded to two places to the right of the decimal point. Create a descriptive column alias for the quotient.
+
+Display the total number of flights that originate from each point of origin.
+
+Revise the previous query so that instead of displaying the code for each point the location of each point of origin from the AIRPORT table is displayed.
+
+Revise the previous query to also include the display of those locations where no flights originate.
+
+Display the average flight pay for pilots that live in each state.
+
+Display the name and flight pay for those pilots whose flight pay exceeds the average flight pay for all pilots.
+
+Display the name and flight pay for those pilots whose flight pay exceeds the average flight pay for all pilots in the state in which they reside.
+
+Display the date of the most recent departure flown by each pilot. Include in what you display the name of the pilot.
+
+Display not only the date of the most recent departure by each pilot but also the number of days since the last departure date. Truncate the number of days (i.e., if 37.67655, display 37) to zero places to the right of the decimal point. Order the result in descending order by the number of days.
+
+Display the number of departures that involve flights for each of the three time zone differences.
+
+Display the number of airports located in each state.
+
+Display the number of departures where the distance flown is greater than or equal to 1000 miles.
+
+Display the difference in age between the oldest and youngest pilot.
+
+For each type of aircraft, display the total distance that can be flown before refueling. Display your results in descending order by total distance that can be flown.
+
+For each passenger listed in the PASSENGER table, display the name of the person responsible for his or her reservation.
+
+For each passenger listed in the PASSENGER table, display the name of the person responsible for his or her reservation only if the passenger himself or herself was not responsible for making the reservation.
+
+For each reservation in the RESERVATION table, display the name of the pilot who will be piloting the flight.
+
+Display those tickets that include only one flight.
+
+Display the name of the passengers whose tickets include only one flight.
