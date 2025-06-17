@@ -1,0 +1,79 @@
+CREATE TABLE AIRPORT (
+    airport_code VARCHAR(3) PRIMARY KEY,
+    location VARCHAR(255),
+    elevation INTEGER,
+    phone_number VARCHAR(20),
+    hub_airline VARCHAR(50)
+);
+
+CREATE TABLE FLIGHT (
+    flight_number VARCHAR(10) PRIMARY KEY,
+    origin VARCHAR(3),
+    destination VARCHAR(3),
+    departure_time TIME,
+    arrival_time TIME,
+    meal_code VARCHAR(10),
+    base_fare DECIMAL(10, 2),
+    mileage INTEGER,
+    time_zone_changes INTEGER,
+    FOREIGN KEY (origin) REFERENCES AIRPORT(airport_code),
+    FOREIGN KEY (destination) REFERENCES AIRPORT(airport_code)
+);
+
+CREATE TABLE PILOTS (
+    pilot_id VARCHAR(10) PRIMARY KEY,
+    pilot_name VARCHAR(255),
+    ssn VARCHAR(11),
+    street_address VARCHAR(255),
+    city VARCHAR(100),
+    state VARCHAR(2),
+    zip_code VARCHAR(10),
+    flight_pay DECIMAL(10, 2),
+    date_of_birth DATE,
+    date_hired DATE
+);
+
+CREATE TABLE DEPARTURES (
+    flight_number VARCHAR(10),
+    departure_date DATE,
+    pilot_id VARCHAR(10),
+    equipment_number VARCHAR(10),
+    PRIMARY KEY (flight_number, departure_date),
+    FOREIGN KEY (flight_number) REFERENCES FLIGHT(flight_number),
+    FOREIGN KEY (pilot_id) REFERENCES PILOTS(pilot_id),
+    FOREIGN KEY (equipment_number) REFERENCES EQUIP_TYPE(equipment_number)
+);
+
+CREATE TABLE EQUIP_TYPE (
+    equipment_number VARCHAR(10) PRIMARY KEY,
+    equipment_type VARCHAR(50),
+    seating_capacity INTEGER,
+    fuel_capacity INTEGER,
+    miles_per_gallon DECIMAL(5, 2)
+);
+
+CREATE TABLE RESERVATIONS (
+    confirmation_number VARCHAR(20) PRIMARY KEY,
+    reservation_date DATE,
+    reservation_name VARCHAR(255),
+    reservation_phone VARCHAR(20),
+    reservation_flight_number VARCHAR(10),
+    reservation_flight_date DATE,
+    FOREIGN KEY (reservation_flight_number) REFERENCES FLIGHT(flight_number)
+);
+
+CREATE TABLE TICKET (
+    itinerary_number VARCHAR(20),
+    flight_number VARCHAR(10),
+    flight_date DATE,
+    seat_assignment VARCHAR(10),
+    PRIMARY KEY (itinerary_number, flight_number, flight_date),
+    FOREIGN KEY (flight_number) REFERENCES FLIGHT(flight_number)
+);
+
+CREATE TABLE PASSENGER (
+    passenger_name VARCHAR(255),
+    itinerary_number VARCHAR(20) PRIMARY KEY,
+    confirmation_number VARCHAR(20),
+    FOREIGN KEY (confirmation_number) REFERENCES RESERVATIONS(confirmation_number)
+);
