@@ -1,4 +1,4 @@
-# Run the following SQL Queries in the database you have created for project #3 and submit reports:
+Run the following SQL Queries in the database you have created for project #3 and submit reports:
 
 Display the origin, destination, departure time from origin, and arrival time at destination for all flights that occur in the same time zone. Your results should be displayed in order by flight number.
 
